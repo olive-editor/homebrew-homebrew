@@ -28,12 +28,11 @@ class Ffmpeg < Formula
   depends_on "dav1d"
   depends_on "fontconfig"
   depends_on "freetype"
-  depends_on "frei0r"
   depends_on "gnutls"
   depends_on "lame"
   depends_on "libass"
   depends_on "libbluray"
-  depends_on "libsoxr"
+  depends_on "libmodplug"
   depends_on "libvidstab"
   depends_on "libvorbis"
   depends_on "libvpx"
@@ -98,22 +97,17 @@ class Ffmpeg < Formula
       --enable-lzma
       --enable-libfontconfig
       --enable-libfreetype
-      --enable-frei0r
       --enable-libass
       --enable-libopencore-amrnb
       --enable-libopencore-amrwb
       --enable-libopenjpeg
       --enable-libspeex
-      --enable-libsoxr
       --enable-libzmq
       --enable-libzimg
+      --enable-libmodplug
       --disable-libjack
       --disable-indev=jack
     ]
-
-    # libavresample has been deprecated and removed but some non-updated formulae are still linked to it
-    # Remove in the next release
-    args << "--enable-avresample" unless build.head?
 
     on_macos do
       # Needs corefoundation, coremedia, corevideo
