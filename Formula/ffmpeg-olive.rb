@@ -15,11 +15,9 @@ class FfmpegOlive < Formula
   end
 
   bottle do
-    sha256 arm64_big_sur: "d603441a90e72b165e70ef1787b2045c6e969f077dcadd1529d04162fbd18ab3"
-    sha256 big_sur:       "9da28933b9f1abc3b1cf92382d1a8ea051c98f9dd0f4ef47e8d37d2aa9a4769a"
-    sha256 catalina:      "3fcc129951906c60f6e2130131fde64e449bc562a605f64be74fc950cac930ea"
-    sha256 mojave:        "8becf08fae7806a6365b489c3dcde8f6f0ddb49a64e96386c2c190a15604a486"
-    sha256 x86_64_linux:  "303961f673338cc304e8a13daa7899cb807b6433be9a7bf78ceaed3fd48d5822"
+    root_url "https://github.com/olive-editor/homebrew-homebrew/releases/download/ffmpeg-olive-4.4_2"
+    sha256 catalina:     "6b83b945ea1717de031a5d0c07dd31d0fba54146f2609d0387b3d9b48ee95848"
+    sha256 x86_64_linux: "92208685015c2a14ee81fcd00f4c2ba487b7233b2857f6740bb6d7b9eae6c5ec"
   end
 
   depends_on "nasm" => :build
