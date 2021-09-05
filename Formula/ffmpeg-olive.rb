@@ -122,6 +122,7 @@ class FfmpegOlive < Formula
     bin.install Dir["tools/*"].select { |f| File.executable? f }
 
     # Fix for Non-executables that were installed to bin/
+    mkdir pkgshare
     mv bin/"python", pkgshare/"python", force: true
   end
 
