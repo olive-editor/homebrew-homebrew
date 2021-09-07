@@ -21,7 +21,6 @@ class OpenimageioOlive < Formula
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
   depends_on "boost"
-  depends_on "boost-python3"
   depends_on "freetype"
   depends_on "giflib"
   depends_on "imath"
@@ -32,8 +31,6 @@ class OpenimageioOlive < Formula
   depends_on "libtiff"
   depends_on "opencolorio"
   depends_on "openexr"
-  depends_on "pybind11"
-  depends_on "python@3.9"
   depends_on "webp"
 
   def install
@@ -48,6 +45,7 @@ class OpenimageioOlive < Formula
       -DUSE_OPENJPEG=OFF
       -DUSE_PTEX=OFF
       -DUSE_QT=OFF
+      -DUSE_PYTHON=OFF
     ]
 
     # CMake picks up the system's python shared library, even if we have a brewed one.
