@@ -72,12 +72,5 @@ class OpenimageioOlive < Formula
     test_image = test_fixtures("test.jpg")
     assert_match "#{test_image} :    1 x    1, 3 channel, uint8 jpeg",
                  shell_output("#{bin}/oiiotool --info #{test_image} 2>&1")
-
-    output = <<~EOS
-      from __future__ import print_function
-      import OpenImageIO
-      print(OpenImageIO.VERSION_STRING)
-    EOS
-    assert_match version.major_minor_patch.to_s, pipe_output(Formula["python@3.9"].opt_bin/"python3", output, 0)
   end
 end
