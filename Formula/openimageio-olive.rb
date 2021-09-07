@@ -1,4 +1,4 @@
-class Openimageio < Formula
+class OpenimageioOlive < Formula
   desc "Library for reading, processing and writing images"
   homepage "https://openimageio.org/"
   url "https://github.com/OpenImageIO/oiio/archive/v2.2.18.0.tar.gz"
