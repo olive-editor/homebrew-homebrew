@@ -13,11 +13,9 @@ class OpenimageioOlive < Formula
   end
 
   bottle do
-    sha256 cellar: :any,                 arm64_big_sur: "5e17b7c08f795f213d4457a7f7942f17df1eaadbaf64b6036b2bacb1b7798f29"
-    sha256 cellar: :any,                 big_sur:       "263b0577dff6a7834f4de270f6f56fec485c2ee872f39180d90c458da4e0a5f9"
-    sha256 cellar: :any,                 catalina:      "e8a0028c161a4f6b1e814ac362a9f251ced660c76a375524f9a1c20e21115c99"
-    sha256 cellar: :any,                 mojave:        "cddc71a90bb3a720bb1ca7324cb69c9161d42594da8c4668ed7733ee1e0d7d40"
-    sha256 cellar: :any_skip_relocation, x86_64_linux:  "60a3a661966a15c3786c510069516c182bba34e92256065f1c7eec184fd46fda"
+    root_url "https://github.com/olive-editor/homebrew-homebrew/releases/download/openimageio-olive-2.2.18.0"
+    sha256                               catalina:     "b1b89b2eaeb5e99508e4c65c42ea6e80bfb7a375a7c6789f08c997af5f991a14"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "0df1ae85b94af83e87a057ba8c05e671c819dc6a03467cd2f42c7764da0f05ba"
   end
 
   depends_on "cmake" => :build
